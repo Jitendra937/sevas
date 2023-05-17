@@ -1,0 +1,284 @@
+@import "./base.css";
+
+/*colors*/
+:root {
+    --lime-green: #094926;
+    --dark-gray: #2C3539;
+    --light-gray: #D9D9D9;
+    --white: #ffffff;
+    --black: #000000;
+    --yellow: #FFCE31;
+
+}
+
+/* site header css */
+.site-header{
+    background-color: #F5F5F5;
+}
+.site-header .site-header__top {
+    padding: 52px 8px;
+    background-color: #F5F5F5;
+}
+
+.site-header .site-header__bottom {
+    padding: 15px 0;
+}
+
+.site-header__bottom .navbar-nav a {
+    padding: 0 10px;
+    color: var(--black);
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.site-header__bottom .navbar-brand img {
+    max-width: 165px;
+}
+
+/* Button css*/
+
+.btn {
+    padding: 7px 18px;
+}
+
+.btn-primary {
+    background-color: var(--lime-green);
+    border-color: transparent;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #ffffff;
+    border-color: var(--lime-green);
+    color: var(--lime-green);
+}
+
+
+/*tile-icon css*/
+
+.tile-icon {
+    position: relative;
+    padding-left: 52px;
+    display: inline-block;
+}
+
+.tile-icon i {
+    position: absolute;
+    top: 6px;
+    left: 0;
+    font-size: 40px;
+    color: var(--lime-green);
+    line-height: 1;
+}
+
+.tile-icon span {
+    font-size: 12px;
+    color: #A7A7A7;
+    line-height: 14px;
+
+}
+
+.tile-icon span a {
+    color: var(--dark-gray);
+    font-size: 18px;
+    display: block;
+}
+
+/* card-video css*/
+.card-video {
+    min-height: 180px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-video a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--black);
+    padding: 10px;
+    border-radius: 50%;
+    text-decoration: none;
+
+}
+
+.card-video a i {
+    font-size: 20px;
+    color: var(--white);
+}
+
+/* media offset css */
+.media-offset {
+    position: relative;
+    padding-right: 15px;
+    padding-bottom: 15px;
+
+}
+
+.media-offset::after {
+    position: absolute;
+    content: '';
+    top: 15px;
+    bottom: 0;
+    right: 0;
+    left: 15px;
+    border: 2px solid var(--lime-green);
+    z-index: -1;
+
+}
+
+.media-offset .media img {
+    width: 100%;
+
+}
+
+/* list count css */
+.list-count ul {
+    counter-reset: section;
+    padding-left: 0;
+}
+
+.list-count ul li {
+    list-style: none;
+    position: relative;
+    padding-left: 55px;
+    margin-bottom: 25px;
+}
+
+.list-count ul li:before {
+    position: absolute;
+    counter-increment: section;
+    content: counter(section);
+    font-size: 60px;
+    font-weight: 800;
+    color: var(--black);
+    top: -3px;
+    left: 0;
+    line-height: 1;
+}
+
+.list-count ul li h6 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--black);
+    line-height: 22px;
+    margin-bottom: 0;
+
+}
+
+.list-count ul li span {
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--black);
+    line-height: 24px;
+
+}
+
+/* card-testimonial css */
+.card-testimonial {
+    background: var(--white);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 25px;
+
+}
+
+.rating ul {
+    padding-left: 0;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.rating ul li {
+    margin-top: 30px;
+    list-style: none;
+    display: inline-block;
+    color: var(--yellow);
+}
+
+.author {
+    position: relative;
+    padding-left: 85px;
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.author .author-media {
+    display: inline-block;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.author .author-media {
+    width: 70px;
+}
+
+.author .author-media img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+.author h6 span {
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--black);
+    line-height: 24px;
+    display: block;
+}
+
+
+/*media queries css*/
+
+
+@media only screen and (min-width: 576px) {
+    .card-video {
+        min-height: 240px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .card-video {
+        min-height: 300px;
+    }
+
+    .media-offset {
+        padding-right: 20px;
+        padding-bottom: 20px;
+
+    }
+
+    .media-offset::after {
+        top: 20px;
+        left: 20px;
+
+
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .site-header{
+        background-color: var(--white);
+    }
+    .site-header__bottom .navbar-brand img {
+        max-width: 312px;
+    }
+    .site-header .site-header__bottom {
+        background-color: var(--white);
+    }
+    
+
+    .list-count ul li {
+        margin-bottom: 41px;
+    }
+
+}
+
+@media only screen and (min-width: 1200px) {}
